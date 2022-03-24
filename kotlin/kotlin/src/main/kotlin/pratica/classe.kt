@@ -1,21 +1,21 @@
 package pratica
 
-class Carro ( var cor: String, var anoFabricacao: Int, var cliente:Cliente){
-    override fun toString(): String {
-        return "Carro ${cor}, Ano Fabricação ${anoFabricacao}"
+// se a nota for >= 6 : Parabés você passou!
+// se a nota for > 4 : Você está de recuperação!
+// se a nota for <= 4: Você reprovou
+
+fun resultado (nota:Int){
+    if (nota >= 6){
+        println("Parabés você passou!")
+    }else if (nota >= 4){
+        println("Você está de recuperação!")
+    }else{
+        println("Você reprovou")
     }
 }
 
-data class Cliente (var nome: String, var idade: Int){
-
-}
-
-fun main(){
-    var transporte = Carro ("prata", 2022, Cliente("Felipe", 29))
-    println(transporte)
-    transporte.cor = "Vermelho"
-    println(transporte.cor)
-    println(transporte.cliente.nome)
-    transporte.cliente.nome = "Emanuel"
-    println(transporte.cliente)
+fun main (){
+    resultado(6)
+    resultado(4)
+    resultado(1)
 }
