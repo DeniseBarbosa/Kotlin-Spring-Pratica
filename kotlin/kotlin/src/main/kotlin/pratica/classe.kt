@@ -1,14 +1,22 @@
 package pratica
 
-//Mini mercadado
-fun carteira (valor:Int): String{
-    if(valor == 20){
-        return "Dois quilos de laranja"
-    }else if (valor == 30){
-        return "Dois pacotes de arroz e um quilo de carne"
-    }
-    return "Saldo insuficiente"
-}
+//When uma forma mais simplificada e completa do If e Else, lembrando que é usada para varias opções
 fun main (){
-    println(carteira(3))
+//    posição obrigatória
+    val x = 21
+
+    when(x){
+        !in 16..20 ->println("Número não está no range de 16 e 20")
+        in 11..14 ->println("X está entre 11 e 14")
+        4, -2 -> println("imprima isso ")
+        5 -> println("Enqanto for 5")
+        8 -> println("Enqaunto for 8")
+        10 ->{
+            println("É possível fazer isso")
+            println("Olha que coisa legal")
+        }
+        else -> println("Número não mapeado")
+    }
+
+
 }
