@@ -1,11 +1,21 @@
 package pratica
 
-class Pessoa(var nome: String, var idade:Int) {
+class Carro ( var cor: String, var anoFabricacao: Int, var cliente:Cliente){
     override fun toString(): String {
-        return "Nome ${nome}, Idade ${idade}"
+        return "Carro ${cor}, Ano Fabricação ${anoFabricacao}"
     }
 }
-fun main (){
-    var objeto = Pessoa("Denise", 25)
-    println(objeto)
+
+data class Cliente (var nome: String, var idade: Int){
+
+}
+
+fun main(){
+    var transporte = Carro ("prata", 2022, Cliente("Felipe", 29))
+    println(transporte)
+    transporte.cor = "Vermelho"
+    println(transporte.cor)
+    println(transporte.cliente.nome)
+    transporte.cliente.nome = "Emanuel"
+    println(transporte.cliente)
 }
